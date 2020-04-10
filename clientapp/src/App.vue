@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Retro />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Retro from './components/Retrospective.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {Retro}
 }
 </script>
 
