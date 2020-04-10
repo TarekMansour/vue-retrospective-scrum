@@ -1,12 +1,15 @@
 <template>
   <div>
-    <h2>Static template:</h2>
-    <TextField>Hello</TextField>
-    <TextField type="primary">Hello</TextField>
-
-    <h2>Dynamically inserted:</h2>
+    <h2>Retrospective</h2>
     <div ref="container">
-      <button @click="onClick">Click to insert</button>
+      <div class="input-group">
+        <TextField />
+        <div class="input-group-append">
+          <button class="btn btn-danger" type="button" @click="onClick">
+            <b-icon icon="plus-circle" aria-hidden="true"></b-icon>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +25,10 @@ export default {
     onClick() {
       var ComponentClass = Vue.extend(TextField);
       var instance = new ComponentClass({
-        propsData: { type: "primary" }
+        propsData: { type: "text" }
       });
       instance.$slots.default = ["Click me!"];
-      instance.$mount(); // pass nothing
-      //         console.log(this.$refs)
+      instance.$mount();
       this.$refs.container.appendChild(instance.$el);
     }
   }

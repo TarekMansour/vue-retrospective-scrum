@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import Retro from './components/Retrospective.vue';
+import Retro from "./components/Retrospective.vue";
 
 export default {
-  name: 'App',
-  components: {Retro}
-}
+  name: "App",
+  components: { Retro }
+};
 </script>
 
 <style>
