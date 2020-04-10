@@ -1,11 +1,11 @@
 <template>
   <!-- <button :class="type"><slot /></button> -->
-  <div class="col col-4">
+  <div class="col col-11">
     <input
       :class="type"
       class="form-control "
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
+      placeholder="what's up?"
+      aria-label="what's up?"
       aria-describedby="basic-addon2"
     />
   </div>
